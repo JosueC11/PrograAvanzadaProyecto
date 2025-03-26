@@ -1,0 +1,30 @@
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.dll.config
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.pdb
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.pdb
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.dll.config
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.xml
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.csproj.AssemblyReference.cache
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.0B7ADA3B.Up2Date
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.dll.config
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Repository.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\Proyecto.Data.dll.config
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.xml
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.csproj.AssemblyReference.cache
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.csproj.CoreCompileInputs.cache
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.0B7ADA3B.Up2Date
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Repository\obj\Debug\Proyecto.Repository.pdb

@@ -1,0 +1,58 @@
+﻿@model Proyecto.Data.tarea
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tarea</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prioridad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prioridad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_creada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_creada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_completada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_completada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.exitosa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.exitosa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,419 @@
+﻿@model IEnumerable<Proyecto.Data.tarea>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<div class="container">
+    <h2>Tareas</h2>
+
+    <div class="controls">
+        <h3>La siguiente tarea se ejecuta en: <span id="contador">30</span></h3>
+        <button id="btnEjecutar" class="btn btn-primary">Ejecutar Tareas</button>
+        <button id="btnRandom" class="btn btn-success">Crear Tareas Aleatorias</button>
+    </div>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-info" })
+    </p>
+
+    <div class="controls">
+        <select id="expression" class="form-select">
+            <option value="all">Todas</option>
+            <option value="group1">Fallidas</option>
+            <option value="group2">Exitosas</option>
+        </select>
+        <button onclick="filterResults()" class="btn btn-outline-primary">Filtrar</button>
+    </div>
+
+    <table id="results" class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prioridad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.fecha_creada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.fecha_completada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.exitosa)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.prioridad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha_creada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha_completada)
+                    </td>
+                    <td>
+                        @if (item.exitosa == true)
+                        {
+                            <span class="badge bg-success">Completado</span>
+                        }
+                        else if (item.exitosa == false)
+                        {
+                            <span class="badge bg-danger">Fallido</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Pendiente</span>
+                        }
+                    </td>
+                    <td class="table-actions">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-sm btn-warning me-1" })
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-sm btn-info me-1" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-sm btn-danger me-1" })
+                        @if (item.exitosa == false)
+                        {
+                            <button class="btn btn-sm btn-success" onclick="completarTarea(@item.id)">Completar</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    //
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #333;
+        }
+
+        .container.body-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+            .btn-success:hover {
+                background-color: #1e7e34;
+            }
+
+        #contador {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        #expression {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        #results {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            #results thead tr {
+                background-color: #007bff;
+                color: #fff;
+                text-align: left;
+            }
+
+            #results th, #results td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            #results th {
+                font-weight: bold;
+            }
+
+            #results tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            #results tbody tr:hover {
+                background-color: #e6f7ff;
+            }
+
+            #results tbody td:last-child {
+                white-space: nowrap;
+            }
+
+        .table-actions a, .table-actions button {
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+        .table-actions a {
+            color: #fff;
+        }
+
+            .table-actions a.edit {
+                background-color: #ffc107;
+                color: #212529;
+            }
+
+            .table-actions a.details {
+                background-color: #17a2b8;
+            }
+
+            .table-actions a.delete {
+                background-color: #dc3545;
+            }
+
+        .table-actions button.completar {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .table-actions a:hover, .table-actions button:hover {
+            opacity: 0.8;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35em 0.65em;
+            font-size: 0.8em;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+        }
+
+            .badge.completado {
+                background-color: #28a745;
+            }
+
+            .badge.fallido {
+                background-color: #dc3545;
+            }
+
+            .badge.pendiente {
+                background-color: #6c757d;
+            }
+    </style>
+
+    <script>
+        let contador = 5;
+        let intervalo = null;
+
+        function iniciarContador() {
+            if (intervalo) {
+                clearInterval(intervalo);
+            }
+            contador = 5;
+            document.getElementById("contador").textContent = contador;
+            intervalo = setInterval(() => {
+                document.getElementById("contador").textContent = contador;
+                contador--;
+
+                if (contador < 0) {
+                    //Llama al metodo para completar la tarea cuando lle ga a cero
+                    completarTareaRandom();
+                    contador = 5;
+                }
+            }, 1000);
+        }
+
+        //Se inicia cuando se da click al boton
+        document.getElementById("btnEjecutar").addEventListener("click", iniciarContador);
+
+        //Crea las tareas aleatorias
+        document.getElementById("btnRandom").addEventListener("click", function () {
+            fetch('@Url.Action("TareasRandom", "tareas")', { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error("Error al generar tareas");
+                })
+                .then(() => {
+                    location.reload(); // Recargar la página para ver las nuevas tareas
+                })
+                .catch(error => console.error(error));
+        });
+
+        //se llama a la funcion para ejecutar las tareas
+        function completarTareaRandom() {
+            fetch('/Tareas/CompletarTareas', {
+                method: 'POST'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        //alert('Tarea actualizada.');
+                    } else {
+                        alert('Hubo un error al completar la tarea');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al completar la tarea:', error);
+                });
+        }
+
+        //Pasa la info del JSON a un formato de fecha
+        function convertirFecha(fechaJson) {
+            if (!fechaJson) return "N/A";
+
+            let timestamp = parseInt(fechaJson.replace(/\/Date\((\d+)\)\//, "$1"));
+
+            let fecha = new Date(timestamp);
+
+            return fecha.toLocaleDateString("es-ES") + " " + fecha.toLocaleTimeString("es-ES");
+        }
+
+        //Script para completar la tarea fallida
+        function completarTarea(id) {
+            fetch(`/Tareas/TareasFallidas/${id}`, {
+                method: 'POST'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Tarea completada.');
+                        //Se recarga la pagina.
+                        location.reload();
+                    } else {
+                        alert('Hubo un error al completar la tarea');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al completar la tarea:', error);
+                });
+        }
+
+
+        //Actualiza la tabla con el filtro
+        function updateResultsList(data) {
+            let resultsTable = document.getElementById("results").querySelector("tbody");
+            resultsTable.innerHTML = "";
+
+            data.forEach(item => {
+                let row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${item.nombre}</td>
+                    <td>${item.prioridad}</td>
+                    <td>${convertirFecha(item.fecha_creada)}</td>
+                    <td>${convertirFecha(item.fecha_completada)}</td>
+                    <td>${item.exitosa === true ? '<span class="badge bg-success">Completado</span>' : (item.exitosa === false ? '<span class="badge bg-danger">Fallido</span>' : '<span class="badge bg-secondary">Pendiente</span>')}</td>
+                    <td class="table-actions">
+                        <a href="/Tareas/Edit/${item.id}" class="btn btn-sm btn-warning me-1">Editar</a>
+                        <a href="/Tareas/Details/${item.id}" class="btn btn-sm btn-info me-1">Detalles</a>
+                        <a href="/Tareas/Delete/${item.id}" class="btn btn-sm btn-danger me-1">Borrar</a>
+                        ${item.exitosa === false ? `<button class="btn btn-sm btn-success" onclick="completarTarea(${item.id})">Completar</button>` : ''}
+                    </td>
+                `;
+
+                resultsTable.appendChild(row);
+            });
+        }
+
+
+        function filterResults() {
+            let expression = document.getElementById("expression").value;
+
+            fetch(`/Tareas/Filtros?expression=${encodeURIComponent(expression)}`, {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => updateResultsList(data)) // Call the local function
+            .catch(error => console.error("Error:", error));
+        }
+
+
+    </script>
+</div>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tareasModelStoreContainer" CdmEntityContainer="tareasEntities">
+    <EntitySetMapping Name="tareas">
+      <EntityTypeMapping TypeName="tareasModel.tarea">
+        <MappingFragment StoreEntitySet="tareas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="prioridad" ColumnName="prioridad" />
+          <ScalarProperty Name="fecha_creada" ColumnName="fecha_creada" />
+          <ScalarProperty Name="fecha_completada" ColumnName="fecha_completada" />
+          <ScalarProperty Name="exitosa" ColumnName="exitosa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

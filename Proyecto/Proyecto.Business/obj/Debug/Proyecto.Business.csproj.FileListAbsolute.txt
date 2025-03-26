@@ -1,0 +1,30 @@
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Business.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Business.pdb
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\EntityFramework.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.pdb
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.dll.config
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.pdb
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.dll.config
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\bin\Debug\EntityFramework.xml
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.csproj.AssemblyReference.cache
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\obj\Debug\Proyecto.1144A75A.Up2Date
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.dll
+C:\Users\erick\OneDrive\Documents\U\Progra Avanzada\Proy\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Business.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Business.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\EntityFramework.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Data.dll.config
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.pdb
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\Proyecto.Repository.dll.config
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\bin\Debug\EntityFramework.xml
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.csproj.AssemblyReference.cache
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.csproj.CoreCompileInputs.cache
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\obj\Debug\Proyecto.1144A75A.Up2Date
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.dll
+C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Business\obj\Debug\Proyecto.Business.pdb
