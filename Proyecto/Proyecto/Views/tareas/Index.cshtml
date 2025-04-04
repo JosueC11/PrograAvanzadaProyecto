@@ -20,6 +20,10 @@
     <p>
         @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-info" })
     </p>
+    <br />
+    <p>
+        @Html.ActionLink("Send Failed Tasks by Mail", "SendFailedTasks", null, new { @class = "btn btn-info" })
+    </p>
 
     <div class="controls">
         <select id="expression" class="form-select">
@@ -152,25 +156,25 @@
             transition: background-color 0.3s ease;
         }
 
-            .btn:hover {
-                background-color: #0056b3;
-            }
+        .btn:hover {
+            background-color: #0056b3;
+        }
 
         .btn-primary {
             background-color: #007bff;
         }
 
-            .btn-primary:hover {
-                background-color: #0056b3;
-            }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
 
         .btn-success {
             background-color: #28a745;
         }
 
-            .btn-success:hover {
-                background-color: #1e7e34;
-            }
+        .btn-success:hover {
+            background-color: #1e7e34;
+        }
 
         #contador {
             font-weight: bold;
@@ -195,32 +199,32 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-            #results thead tr {
-                background-color: #007bff;
-                color: #fff;
-                text-align: left;
-            }
+        #results thead tr {
+            background-color: #007bff;
+            color: #fff;
+            text-align: left;
+        }
 
-            #results th, #results td {
-                padding: 12px 15px;
-                border-bottom: 1px solid #e0e0e0;
-            }
+        #results th, #results td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-            #results th {
-                font-weight: bold;
-            }
+        #results th {
+            font-weight: bold;
+        }
 
-            #results tbody tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
+        #results tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
-            #results tbody tr:hover {
-                background-color: #e6f7ff;
-            }
+        #results tbody tr:hover {
+            background-color: #e6f7ff;
+        }
 
-            #results tbody td:last-child {
-                white-space: nowrap;
-            }
+        #results tbody td:last-child {
+            white-space: nowrap;
+        }
 
         .table-actions a, .table-actions button {
             margin-right: 8px;
@@ -235,18 +239,18 @@
             color: #fff;
         }
 
-            .table-actions a.edit {
-                background-color: #ffc107;
-                color: #212529;
-            }
+        .table-actions a.edit {
+            background-color: #ffc107;
+            color: #212529;
+        }
 
-            .table-actions a.details {
-                background-color: #17a2b8;
-            }
+        .table-actions a.details {
+            background-color: #17a2b8;
+        }
 
-            .table-actions a.delete {
-                background-color: #dc3545;
-            }
+        .table-actions a.delete {
+            background-color: #dc3545;
+        }
 
         .table-actions button.completar {
             background-color: #28a745;
@@ -272,17 +276,17 @@
             border-radius: 0.25rem;
         }
 
-            .badge.completado {
-                background-color: #28a745;
-            }
+        .badge.completado {
+            background-color: #28a745;
+        }
 
-            .badge.fallido {
-                background-color: #dc3545;
-            }
+        .badge.fallido {
+            background-color: #dc3545;
+        }
 
-            .badge.pendiente {
-                background-color: #6c757d;
-            }
+        .badge.pendiente {
+            background-color: #6c757d;
+        }
     </style>
 
     <script>

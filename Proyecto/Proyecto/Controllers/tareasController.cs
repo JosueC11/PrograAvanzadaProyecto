@@ -9,13 +9,19 @@ using System.Web.Mvc;
 using Proyecto.Data;
 using Proyecto.Business;
 using System.Text.RegularExpressions;
+using Proyecto.Service;
 
 namespace Proyecto.Controllers
 {
     public class tareasController : Controller
     {
         private readonly TareaManager _manager = new TareaManager();
+        private readonly MailService _mailService;
 
+        public tareasController()
+        {
+            _mailService = new MailService();
+        }
         // GET: tareas
         public ActionResult Index()
         {
@@ -171,6 +177,20 @@ namespace Proyecto.Controllers
             _manager.Save(tarea);
             return RedirectToAction("Index");
         }
-        
+
+        public ActionResult SendFailedTasks()
+        {
+            bool sendingtasks = _mailService.SendMail();
+            if (sendingtasks)
+            {
+                ViewBag.Message = "Email sent successfully.";
+            }
+            else
+            {
+                ViewBag.Message = "Failed to send email.";
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }

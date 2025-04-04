@@ -95,5 +95,9 @@ namespace Proyecto.Business
             return GetAllTareas();
         }
 
+        public IEnumerable<tarea> GetAllFailedTasks()
+        {
+            return _repositoryTarea.GetAll().Where(e => e.exitosa == false);
+        }
     }
 }
