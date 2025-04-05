@@ -16,11 +16,13 @@ namespace Proyecto.Controllers
     public class tareasController : Controller
     {
         private readonly TareaManager _manager = new TareaManager();
+        private readonly PDFService _pdfService;
         private readonly MailService _mailService;
 
         public tareasController()
         {
             _mailService = new MailService();
+            _pdfService = new PDFService();
         }
         // GET: tareas
         public ActionResult Index()
@@ -180,7 +182,9 @@ namespace Proyecto.Controllers
 
         public ActionResult SendFailedTasks()
         {
-            bool sendingtasks = _mailService.SendMail();
+            IEnumerable<tarea> failedtasks = _manager.GetAllFailedTasks();
+            string pdfPath = _pdfService.GeneratePDF(failedtasks);
+            bool sendingtasks = _mailService.SendMail(pdfPath);
             if (sendingtasks)
             {
                 ViewBag.Message = "Email sent successfully.";
