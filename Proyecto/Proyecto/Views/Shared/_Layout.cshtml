@@ -3,33 +3,98 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - TareasFidelitas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    @* @Styles.Render("~/Content/css") *@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #2c2c2c;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ffb14d !important;
+        }
+
+            .nav-link:hover {
+                color: #ffffff !important;
+            }
+
+        .body-content {
+            background-color: #1c1c1c;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #ffffff;
+        }
+
+        a, .btn-link {
+            color: #66d9ef;
+        }
+
+        .btn-outline-primary {
+            color: #66d9ef;
+            border-color: #66d9ef;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: #66d9ef;
+                color: #121212;
+            }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #a0a0a0;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 0.9rem;
+            }
+
+        hr {
+            border-top: 1px solid #333;
+        }
+    </style>
 </head>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("TareasFidelitas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Tarea", "Index", "tareas", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Tareas Fallidas", "Index_Fallidas", "tareas", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Tareas", "Index", "tareas", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Tareas Fallidas", "Index_Fallidas", "tareas", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container body-content bg-white shadow-sm p-3 mb-5 rounded">
+
+    <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - TareasFidelitas. Todos los derechos reservados.</p>
         </footer>
     </div>
 

@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\",
+  "WorkspaceRootPath": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\documents\\7 cuatrimestre\\progra avanzada\\proyecto\\proyecto\\proyecto\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\documents\\7 cuatrimestre\\progra avanzada\\proyecto\\proyecto\\proyecto\\views\\tareas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto\\views\\tareas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\views\\tareas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\proyecto\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{090421E3-D03D-4AF8-8CE5-892B937A66B5}|Proyecto.Service\\Proyecto.Service.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto.service\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{090421E3-D03D-4AF8-8CE5-892B937A66B5}|Proyecto.Service\\Proyecto.Service.csproj|solutionrelative:proyecto.service\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0501EA11-E684-4661-814B-D655FF4629C2}|Proyecto.Business\\Proyecto.Business.csproj|C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\proyecto.business\\tareamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0501EA11-E684-4661-814B-D655FF4629C2}|Proyecto.Business\\Proyecto.Business.csproj|solutionrelative:proyecto.business\\tareamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{090421E3-D03D-4AF8-8CE5-892B937A66B5}|Proyecto.Service\\Proyecto.Service.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto.service\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{090421E3-D03D-4AF8-8CE5-892B937A66B5}|Proyecto.Service\\Proyecto.Service.csproj|solutionrelative:proyecto.service\\pdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\documents\\7 cuatrimestre\\progra avanzada\\proyecto\\proyecto\\proyecto\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|c:\\users\\xsf\\downloads\\prograavanzadaproyecto\\prograavanzadaproyecto\\proyecto\\proyecto\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{08DF661F-1C32-464B-8EC2-8BF31ECD1F64}|Proyecto\\Proyecto.csproj|solutionrelative:proyecto\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +37,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 273,
+          "DockedWidth": 200,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -39,66 +47,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Proyecto\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Proyecto\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAHAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyecto\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Home\\Index.cshtml*",
+              "RelativeToolTip": "Proyecto\\Views\\Home\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T18:54:46.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Web.config",
-              "RelativeDocumentMoniker": "Proyecto\\Web.config",
-              "ToolTip": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Web.config",
-              "RelativeToolTip": "Proyecto\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-03-26T18:21:45.145Z",
+              "WhenOpened": "2025-04-09T17:15:12.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Views\\tareas\\Index.cshtml",
-              "RelativeDocumentMoniker": "Proyecto\\Views\\tareas\\Index.cshtml",
-              "ToolTip": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Views\\tareas\\Index.cshtml",
-              "RelativeToolTip": "Proyecto\\Views\\tareas\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAYAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Proyecto\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Proyecto\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T01:30:26.377Z",
+              "WhenOpened": "2025-04-09T17:13:52.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PDFService.cs",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto.Service\\PDFService.cs",
+              "RelativeDocumentMoniker": "Proyecto.Service\\PDFService.cs",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto.Service\\PDFService.cs",
+              "RelativeToolTip": "Proyecto.Service\\PDFService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T17:10:38.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TareaManager.cs",
-              "DocumentMoniker": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto.Business\\TareaManager.cs",
-              "RelativeDocumentMoniker": "Proyecto.Business\\TareaManager.cs",
-              "ToolTip": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto.Business\\TareaManager.cs",
-              "RelativeToolTip": "Proyecto.Business\\TareaManager.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAQwEkAAAAmAAAAAAAAAA==",
+              "Title": "MailService.cs",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto.Service\\MailService.cs",
+              "RelativeDocumentMoniker": "Proyecto.Service\\MailService.cs",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto.Service\\MailService.cs",
+              "RelativeToolTip": "Proyecto.Service\\MailService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T15:02:55.837Z",
+              "WhenOpened": "2025-04-09T17:10:15.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Web.config",
+              "RelativeDocumentMoniker": "Proyecto\\Web.config",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Web.config",
+              "RelativeToolTip": "Proyecto\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-09T17:03:44.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Web.config",
+              "RelativeDocumentMoniker": "Proyecto\\Views\\Web.config",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\Web.config",
+              "RelativeToolTip": "Proyecto\\Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-09T17:03:39.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "tareasController.cs",
-              "DocumentMoniker": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Controllers\\tareasController.cs",
-              "RelativeDocumentMoniker": "Proyecto\\Controllers\\tareasController.cs",
-              "ToolTip": "C:\\Users\\XSF\\Documents\\7 Cuatrimestre\\Progra Avanzada\\Proyecto\\Proyecto\\Proyecto\\Controllers\\tareasController.cs",
-              "RelativeToolTip": "Proyecto\\Controllers\\tareasController.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAwwFoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T15:05:52.22Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\tareas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyecto\\Views\\tareas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\XSF\\Downloads\\PrograAvanzadaProyecto\\PrograAvanzadaProyecto\\Proyecto\\Proyecto\\Views\\tareas\\Index.cshtml",
+              "RelativeToolTip": "Proyecto\\Views\\tareas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T17:02:05.845Z",
               "EditorCaption": ""
             }
           ]

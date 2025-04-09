@@ -22,3 +22,27 @@ C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto
 C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.4BFCE0F7.Up2Date
 C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.dll
 C:\Users\XSF\Documents\7 Cuatrimestre\Progra Avanzada\Proyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.pdb
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.dll.config
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.dll
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.pdb
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.dll
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.xml
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.csproj.AssemblyReference.cache
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.csproj.CoreCompileInputs.cache
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.4BFCE0F7.Up2Date
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.dll
+C:\Users\jcast\Source\Repos\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.pdb
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.dll.config
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.dll
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\Proyecto.Data.pdb
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.dll
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.xml
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.csproj.AssemblyReference.cache
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.csproj.CoreCompileInputs.cache
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.4BFCE0F7.Up2Date
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.dll
+C:\Users\XSF\Downloads\PrograAvanzadaProyecto\PrograAvanzadaProyecto\Proyecto\Proyecto.Data\obj\Debug\Proyecto.Data.pdb
