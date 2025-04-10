@@ -74,7 +74,6 @@ namespace Proyecto.Controllers
             Random random = new Random();
 
             var ultTarea = _manager.GetAllTareasUltima();   
-            //Obtiene los numeros del string y lo asigna a una variable para hacer las tareas.
             int num = int.Parse(Regex.Match(ultTarea.nombre, @"\d+").Value);
 
             //Ciclo para crear las tareas y numeros
@@ -83,8 +82,8 @@ namespace Proyecto.Controllers
                 var tarea = new tarea
                 {
                     nombre = "Tarea-" + i,
-                    prioridad = random.Next(1, 4), // Prioridad la escoge de uno a tres
-                    fecha_creada = DateTime.Now // Pone la fecha de hoy                                       
+                    prioridad = random.Next(1, 4),
+                    fecha_creada = DateTime.Now                                    
                 };
 
                 _manager.Add(tarea);
@@ -97,7 +96,8 @@ namespace Proyecto.Controllers
         public ActionResult CompletarTareas()
         {
             _manager.RealizaTarea();
-            return RedirectToAction("Index");
+            var tareasActualizadas = _manager.GetAllTareas(); 
+            return Json(tareasActualizadas, JsonRequestBehavior.AllowGet); 
         }
 
         [HttpPost]

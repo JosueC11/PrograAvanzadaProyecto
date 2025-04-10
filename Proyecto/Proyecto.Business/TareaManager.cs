@@ -84,14 +84,16 @@ namespace Proyecto.Business
             _repositoryTarea.Update(tarea);
         }
 
-        public IEnumerable <tarea> Filtro(string grupo = "all")
+        public IEnumerable<tarea> Filtro(string grupo = "all")
         {
             if (grupo == "all")
                 return GetAllTareas();
             if (grupo == "group1")
-                return GetAllTareas().Where(n =>n.exitosa == false);
+                return GetAllTareas().Where(n => n.exitosa == false);
             if (grupo == "group2")
                 return GetAllTareas().Where(n => n.exitosa == true);
+            if (grupo == "Pendientes")
+                return GetAllTareas().Where(n => n.exitosa == null);
             return GetAllTareas();
         }
 

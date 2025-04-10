@@ -14,6 +14,7 @@
     <div class="controls">
         <h3>La siguiente tarea se ejecuta en: <span id="contador">30</span></h3>
         <button id="btnEjecutar" class="btn btn-primary">Ejecutar Tareas</button>
+        <button id="btnDetener" class="btn btn-danger">Detener Ejecución</button>
         <button id="btnRandom" class="btn btn-success">Crear Tareas Aleatorias</button>
     </div>
 
@@ -30,6 +31,7 @@
             <option value="all">Todas</option>
             <option value="group1">Fallidas</option>
             <option value="group2">Exitosas</option>
+            <option value="Pendientes">Pendientes</option>
         </select>
         <button onclick="filterResults()" class="btn btn-outline-primary">Filtrar</button>
     </div>
@@ -318,134 +320,146 @@
     </style>
 
     <script>
-        let contador = 5;
-        let intervalo = null;
+    let contador = 5;
+    let intervalo = null;
+    let ejecucionActiva = false; 
 
-        function iniciarContador() {
-            if (intervalo) {
-                clearInterval(intervalo);
-            }
-            contador = 5;
+    function iniciarContador() {
+        if (ejecucionActiva) { 
+            return;
+        }
+        ejecucionActiva = true;
+        document.getElementById("btnEjecutar").disabled = true; 
+        document.getElementById("btnDetener").disabled = false; 
+
+        if (intervalo) {
+            clearInterval(intervalo);
+        }
+        contador = 5;
+        document.getElementById("contador").textContent = contador;
+        intervalo = setInterval(() => {
             document.getElementById("contador").textContent = contador;
-            intervalo = setInterval(() => {
-                document.getElementById("contador").textContent = contador;
-                contador--;
+            contador--;
 
-                if (contador < 0) {
-                    //Llama al metodo para completar la tarea cuando lle ga a cero
-                    completarTareaRandom();
-                    contador = 5;
+            if (contador < 0) {
+                completarTareaRandom();
+                contador = 5;
+            }
+        }, 1000);
+    }
+
+    function detenerContador() {
+        ejecucionActiva = false;
+        clearInterval(intervalo);
+        intervalo = null;
+        document.getElementById("contador").textContent = "Detenido";
+        document.getElementById("btnEjecutar").disabled = false; 
+        document.getElementById("btnDetener").disabled = true;  
+    }
+
+    document.getElementById("btnEjecutar").addEventListener("click", iniciarContador);
+
+    document.getElementById("btnDetener").addEventListener("click", detenerContador);
+
+    //Crea las tareas aleatorias
+    document.getElementById("btnRandom").addEventListener("click", function () {
+        fetch('@Url.Action("TareasRandom", "tareas")', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
                 }
-            }, 1000);
-        }
+                throw new Error("Error al generar tareas");
+            })
+            .then(() => {
+                location.reload(); 
+            })
+            .catch(error => console.error(error));
+    });
 
-        //Se inicia cuando se da click al boton
-        document.getElementById("btnEjecutar").addEventListener("click", iniciarContador);
-
-        //Crea las tareas aleatorias
-        document.getElementById("btnRandom").addEventListener("click", function () {
-            fetch('@Url.Action("TareasRandom", "tareas")', { method: 'POST' })
-                .then(response => {
-                    if (response.ok) {
-                        return response.text();
-                    }
-                    throw new Error("Error al generar tareas");
-                })
-                .then(() => {
-                    location.reload(); // Recargar la página para ver las nuevas tareas
-                })
-                .catch(error => console.error(error));
+    function completarTareaRandom() {
+        fetch('/Tareas/CompletarTareas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Hubo un error al completar la tarea');
+            }
+        })
+        .then(data => {
+            updateResultsList(data);
+        })
+        .catch(error => {
+            console.error('Error al completar la tarea:', error);
         });
+    }
 
-        //se llama a la funcion para ejecutar las tareas
-        function completarTareaRandom() {
-            fetch('/Tareas/CompletarTareas', {
-                method: 'POST'
-            })
-                .then(response => {
-                    if (response.ok) {
-                        //alert('Tarea actualizada.');
-                    } else {
-                        alert('Hubo un error al completar la tarea');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error al completar la tarea:', error);
-                });
-        }
+    function convertirFecha(fechaJson) {
+        if (!fechaJson) return "N/A";
+        let timestamp = parseInt(fechaJson.replace(/\/Date\((\d+)\)\//, "$1"));
+        let fecha = new Date(timestamp);
+        return fecha.toLocaleDateString("es-ES") + " " + fecha.toLocaleTimeString("es-ES");
+    }
 
-        //Pasa la info del JSON a un formato de fecha
-        function convertirFecha(fechaJson) {
-            if (!fechaJson) return "N/A";
+    function completarTarea(id) {
+        fetch(`/Tareas/TareasFallidas/${id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Hubo un error al completar la tarea');
+            }
+        })
+        .then(data => {
+            updateResultsList(data);
+        })
+        .catch(error => {
+            console.error('Error al completar la tarea:', error);
+        });
+    }
 
-            let timestamp = parseInt(fechaJson.replace(/\/Date\((\d+)\)\//, "$1"));
+    function updateResultsList(data) {
+        let resultsTable = document.getElementById("results").querySelector("tbody");
+        resultsTable.innerHTML = "";
+        data.forEach(item => {
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.nombre}</td>
+                <td>${item.prioridad}</td>
+                <td>${convertirFecha(item.fecha_creada)}</td>
+                <td>${convertirFecha(item.fecha_completada)}</td>
+                <td>${item.exitosa === true ? '<span class="badge bg-success">Completado</span>' : (item.exitosa === false ? '<span class="badge bg-danger">Fallido</span>' : '<span class="badge bg-secondary">Pendiente</span>')}</td>
+                <td class="table-actions">
+                    <a href="/Tareas/Edit/${item.id}" class="btn btn-sm btn-warning me-1">Editar</a>
+                    <a href="/Tareas/Details/${item.id}" class="btn btn-sm btn-info me-1">Detalles</a>
+                    <a href="/Tareas/Delete/${item.id}" class="btn btn-sm btn-danger me-1">Borrar</a>
+                    ${item.exitosa === false ? `<button class="btn btn-sm btn-success" onclick="completarTarea(${item.id})">Completar</button>` : ''}
+                </td>
+            `;
+            resultsTable.appendChild(row);
+        });
+    }
 
-            let fecha = new Date(timestamp);
-
-            return fecha.toLocaleDateString("es-ES") + " " + fecha.toLocaleTimeString("es-ES");
-        }
-
-        //Script para completar la tarea fallida
-        function completarTarea(id) {
-            fetch(`/Tareas/TareasFallidas/${id}`, {
-                method: 'POST'
-            })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Tarea completada.');
-                        //Se recarga la pagina.
-                        location.reload();
-                    } else {
-                        alert('Hubo un error al completar la tarea');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error al completar la tarea:', error);
-                });
-        }
-
-
-        //Actualiza la tabla con el filtro
-        function updateResultsList(data) {
-            let resultsTable = document.getElementById("results").querySelector("tbody");
-            resultsTable.innerHTML = "";
-
-            data.forEach(item => {
-                let row = document.createElement("tr");
-
-                row.innerHTML = `
-                    <td>${item.nombre}</td>
-                    <td>${item.prioridad}</td>
-                    <td>${convertirFecha(item.fecha_creada)}</td>
-                    <td>${convertirFecha(item.fecha_completada)}</td>
-                    <td>${item.exitosa === true ? '<span class="badge bg-success">Completado</span>' : (item.exitosa === false ? '<span class="badge bg-danger">Fallido</span>' : '<span class="badge bg-secondary">Pendiente</span>')}</td>
-                    <td class="table-actions">
-                        <a href="/Tareas/Edit/${item.id}" class="btn btn-sm btn-warning me-1">Editar</a>
-                        <a href="/Tareas/Details/${item.id}" class="btn btn-sm btn-info me-1">Detalles</a>
-                        <a href="/Tareas/Delete/${item.id}" class="btn btn-sm btn-danger me-1">Borrar</a>
-                        ${item.exitosa === false ? `<button class="btn btn-sm btn-success" onclick="completarTarea(${item.id})">Completar</button>` : ''}
-                    </td>
-                `;
-
-                resultsTable.appendChild(row);
-            });
-        }
-
-
-        function filterResults() {
-            let expression = document.getElementById("expression").value;
-
-            fetch(`/Tareas/Filtros?expression=${encodeURIComponent(expression)}`, {
-                method: "GET",
-                headers: {
-                    "Accept": "application/json"
-                }
-            })
-            .then(response => response.json())
-            .then(data => updateResultsList(data)) // Call the local function
-            .catch(error => console.error("Error:", error));
-        }
-
-
+    function filterResults() {
+        let expression = document.getElementById("expression").value;
+        fetch(`/Tareas/Filtros?expression=${encodeURIComponent(expression)}`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(data => updateResultsList(data))
+        .catch(error => console.error("Error:", error));
+    }
     </script>
 </div>
