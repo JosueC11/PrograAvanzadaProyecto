@@ -103,8 +103,23 @@ namespace Proyecto.Controllers
         [HttpPost]
         public ActionResult TareasFallidas(int? id)
         {
-            _manager.RealizaTareaCompleta(id);
-            return RedirectToAction("Index");
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var tarea = _manager.GetById(id) as tarea;
+            if (tarea == null)
+            {
+                return HttpNotFound();
+            }
+
+            tarea.exitosa = true;
+            _manager.Save(tarea);
+
+            var tareasActualizadas = _manager.GetAllTareas(); 
+
+            return Json(tareasActualizadas, JsonRequestBehavior.AllowGet); 
         }
 
         public ActionResult Filtros(string expression)

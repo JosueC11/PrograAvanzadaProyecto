@@ -405,27 +405,29 @@
         return fecha.toLocaleDateString("es-ES") + " " + fecha.toLocaleTimeString("es-ES");
     }
 
-    function completarTarea(id) {
-        fetch(`/Tareas/TareasFallidas/${id}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Hubo un error al completar la tarea');
-            }
-        })
-        .then(data => {
-            updateResultsList(data);
-        })
-        .catch(error => {
-            console.error('Error al completar la tarea:', error);
-        });
-    }
+        function completarTarea(id) {
+            fetch(`/Tareas/TareasFallidas/${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); 
+                    } else {
+                        throw new Error('Hubo un error al completar la tarea');
+                    }
+                })
+                .then(data => {
+                    updateResultsList(data); 
+                    alert('Tarea completada.'); 
+                })
+                .catch(error => {
+                    console.error('Error al completar la tarea:', error);
+                    alert('Hubo un error al completar la tarea'); 
+                });
+        }
 
     function updateResultsList(data) {
         let resultsTable = document.getElementById("results").querySelector("tbody");
